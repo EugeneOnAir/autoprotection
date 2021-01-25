@@ -1,0 +1,693 @@
+$scnd-color:  #EB5D56;
+$cherry-color: #8B304A;
+$dark-color: #4F4F4F;
+
+*{box-sizing: inherit;
+	box-sizing: border-box;}
+img{max-width: 100%;
+    height: auto;}  
+a{text-decoration: none;
+	color: inherit;}
+p,span,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
+a:focus, button:focus, input:focus{outline: $scnd-color auto 2px;}
+body{
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Roboto Condensed', Arial, sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 400;
+  color: $dark-color;
+
+  background-color: #ffffff;
+  width: 100%;
+	&.lock{overflow: hidden;}
+}
+
+h1{
+  margin-bottom: 37px;
+
+  text-transform: uppercase;
+  font-size: 52px;    
+  line-height: 62px;
+  font-weight: 700;
+  @media (max-width: 479px){font-size: 32px;line-height: normal;}
+}
+
+h2{
+  color: #97364C;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46px;
+  text-transform: uppercase;
+
+  background: linear-gradient(91.17deg, #EB5D56 0.01%, #390A40 100.01%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  @media (max-width: 479px){font-size: 32px;line-height: normal;}
+}
+
+h3{
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.container {
+	max-width: 1300px;
+	margin: 0 auto;
+  @media (max-width: 1350px){max-width: 980px;}
+  @media (max-width: 992px){max-width: calc(100% - 40px); padding: 0 20px;}
+  @media (max-width: 479px){max-width: calc(100% - 30px); padding: 0 15px;}
+}
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.page{
+	display: flex;
+	flex-direction: column;
+  justify-content: space-between;
+	min-height: 100vh;
+}
+
+.form-label{
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.form-input{    
+  width: 100%;
+  max-width: 336px;
+  background: #FFFFFF;
+  border: 1px solid #FCFAE1;
+  border-radius: 4px;
+  padding: 14px 0 18px 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 16px;
+  box-sizing: border-box;
+}
+
+.error{
+  -moz-box-shadow: 0 0 15px #ff0000; 
+  -webkit-box-shadow: 0 0 15px #ff0000; 
+  box-shadow: 0 0 15px #ff0000; 
+}
+
+.button{
+  width: 100%;
+  max-width: 336px;
+  padding: 12px 0;
+  border: 0;
+
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-align: center;
+
+  background: linear-gradient(91.17deg, #EB5D56 0.01%, #390A40 100.01%);
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow:    0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow:         0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}  
+button:active{background: linear-gradient(91.17deg, #812C49 0.01%, #390A40 100.01%);}
+
+.line{
+  height: 2px;
+  border: 0;
+  background: linear-gradient(89.72deg, rgba(235, 93, 86, 0) 0.24%, #EB5D56 28.23%, #390A40 73.32%, rgba(57, 10, 64, 0) 99.24%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+
+/*-- HEADER --*/
+.header {}
+.header-wrapper {
+  margin-top: 12px;
+  margin-bottom: 9px; 
+  display: flex;
+  align-items: center;
+  @media (max-width: 479px){flex-wrap:wrap;}
+}
+.logo {max-width: 200px;
+  a{display: block;}
+  &:hover{transform: scale(1.1);}
+}
+.menu {margin: 0 auto;
+  :last-child{margin-right: 0;}
+  @media (max-width: 1350px){display: none;}
+}
+
+.menu-link {
+  margin-right: 36px;
+  display: inline-block;
+  &:hover{transform: scale(1.1);}
+}
+
+.phone {
+  width: 200px;
+
+  text-align: right;
+  font-family: Roboto Condensed;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #3E0D41;
+  &::before{
+    content:'';
+    background: url("../img/phone.png") center no-repeat;
+    display: inline-block; 
+    width: 17px;
+    height: 17px;
+    margin-right: 12px;
+    @media (max-width: 255px){display: none;}    
+  }
+  &:hover{transform: scale(1.1);}
+  @media (max-width: 1350px){margin-left: auto;}
+  @media (max-width: 479px){margin-right: auto;margin-left: 0;margin-top: 20px;}
+}
+/*-- /HEADER --*/
+
+
+/*-- FOOTER --*/
+.footer {}
+.footer-wrapper {padding-top: 4px; display: flex;
+  @media (max-width: 768px){
+    flex-wrap: wrap;
+  }
+  @media (max-width: 480px){flex-direction: column; align-items: center;}
+}
+.policy {
+  width: 204px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+
+  color: #828282;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  :nth-child(n){margin-bottom: 20px; }
+  a:first-child{text-decoration: underline;} 
+  a:hover{display: inline-block;transform: scale(1.1);}
+} 
+
+.webstudio-link {width: 57px;}
+.footer-logo {
+  margin: 0 auto;
+  @media (max-width: 768px){width: calc(100%+40px); padding: 0 20px;}
+  @media (max-width: 480px){margin: 0;padding: 0; margin-bottom: 20px;}
+  &:hover{transform: scale(1.1);}
+  a{height: auto; display: block;}
+}
+.footer-contacts {
+  width: 204px;
+  padding-top: 10px;
+
+  a{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 16px;
+
+    word-wrap: break-word;
+    font-size: 20px;
+    line-height: 23px;
+  &:hover{transform: scale(1.1);}
+  }
+}
+/*-- /FOOTER --*/
+
+
+/*-- BUY-CAR --*/
+.buy-wrapper{
+  flex-wrap: wrap;
+  padding: 110px 110px 75px;
+  @media (max-width: 1350px){padding-left: 60px;padding-right: 60px;}
+  @media (max-width: 992px){justify-content: flex-end;}
+  @media (max-width: 567px){padding: 80px 0 55px;}
+}
+
+.buy-car {
+  background: linear-gradient(to top, rgba(16, 15, 15, 0.6), rgba(16, 15, 15, 0.66)), url("../img/background/tesla-background.jpg") bottom center no-repeat;
+  background-size: cover;
+}
+.text-short-form {
+  color: #ffffff;
+  max-width: 500px;
+  margin-bottom: 37px;
+  span{
+    display: inline-block;
+    margin-bottom: 32px;
+
+    text-transform: uppercase; 
+    font-size: 18px; 
+    line-height: 18px; 
+    letter-spacing: 0.08em;
+  }
+  @media (max-width: 1350px){width: 380px;}
+}
+.short-form {
+  flex-shrink: 0;
+  padding: 36px 32px;
+  color: #ffffff;
+  background: rgba(51, 51, 51, 0.6);
+  border-radius: 6px;
+  max-width: 400px;
+  @media (max-width: 479px){flex-shrink: 1;}
+  p{
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+  }
+  .button{margin-bottom: 30px;}
+}
+
+.short-form-title{
+  display: inline-block;
+  margin-bottom: 46px;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.form-group{
+  margin-bottom: 14px;   
+}
+/*-- /BUY-CAR --*/
+
+
+/*-- ANYCAR --*/
+.anycar {
+  padding-top: 110px;
+  margin-bottom: 65px;
+  text-align: center;
+  h2{margin: 0 auto 90px; }
+  @media (max-width: 992px){padding-top: 80px;}
+  .container{@media (max-width: 479px){padding-left: 0;padding-right: 0;}}
+}
+.anycar-wrapper { 
+  flex-wrap: wrap; 
+  align-items: flex-end;
+  margin: 0 21px;
+  @media (max-width: 992px){margin: 0;}
+}
+.car-type {
+  flex-basis: 400px;
+  @media (max-width: 992px){flex-basis: 200px;}
+  margin: 0 auto;
+  margin-bottom: 40px;
+  .line{margin-bottom: 12px;}
+  img{margin-bottom: 43px; max-width: 400px;
+      @media (max-width: 992px){max-width: 200px;}
+  }
+
+  transition: all 0.1s ease-out;
+  &:hover{transform: scale(1.01);}
+  .line{max-width: 200px;}
+}
+
+/*-- /ANYCAR --*/
+
+
+/*-- RISK     --*/
+.risk {
+  background: url("../img/background/risk-background.jpg") 0 0/auto 584px no-repeat;
+  min-height: 580px;
+  margin-bottom: 77px;
+  position: relative;
+  @media (max-width: 1350px){background-size: cover;padding-bottom: 40px;}
+}
+
+.risk-wrapper{
+  padding-top: 38px;
+  position: relative;
+  z-index: 2;
+  max-width: 684px;
+  margin-left: auto;
+
+  h2{margin-bottom: 68px;}
+  @media (max-width: 1350px){margin-left: 0;margin-right: auto;}
+
+}
+
+.cards{
+  flex-wrap: wrap;
+  background:rgba(255, 255, 255, 0.55);
+  margin: -15px;
+  padding: 15px;
+  border-radius: 4px; 
+  @media (max-width: 992px) {
+    margin: 0;    
+  }
+}
+
+.card-risk {
+  width: 311px;
+  margin-bottom: 44px;
+  img{padding-bottom: 22px;}
+  p{
+    font-family: Roboto, Arial, sans-serif;;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  h3{margin-bottom: 14px;}
+}
+/*-- /RISK --*/
+
+
+/*-- WHATSAPP --*/
+.whatsapp {
+  padding-top: 77px;
+  margin-bottom: 77px;
+  background: url("../img/background/wheels-background.png") center no-repeat;
+  background-size: auto 540px;
+}
+
+.whatsapp-wrapper{
+  padding: 0 73px 0 110px;
+  align-items: center;
+  @media (max-width: 1350px){padding-left: 46px;padding-right: 60px;}
+  @media (max-width: 480px){padding: 0;}
+}
+.text-whatsapp {
+  max-width: 510px;
+  h2{margin-bottom: 34px;}
+  h3{margin-bottom: 83px;
+  @media (max-width: 1350px){margin-bottom: 46px;}
+  }
+}
+.img-whatsapp {
+  margin-left: 20px; 
+  img{
+    max-width: 460px;
+    object-fit: contain;
+    position: relative;  
+    top: 0;
+    left: 0; 
+    @media (max-width: 992px){max-width: 200px;}
+    @media (max-width: 768px){max-width: 150px;}
+    @media (max-width: 567px){display: none;}
+  }
+}
+/*-- /WHATSAPP --*/
+
+
+/*-- DOCUMENTS --*/
+.documents {
+  text-align: center;
+  padding-top: 77px;
+  margin-bottom: 103px;
+  h2{margin-bottom: 64px;}
+  .line{
+    max-width: 400px; 
+    margin-bottom: 26px;
+  }
+  p{font-size: 24px;line-height: 34px; max-width:463px; margin: 0 auto;}
+}
+.documents-wrapper{
+  padding: 0 85px;
+  @media (max-width: 1350px){padding-left: 46px;padding-right: 46px;}
+  @media (max-width: 992px){padding: 0;}
+}
+.documents-body {
+  text-align: left;
+  padding-bottom: 48px;
+  align-items: center;
+  @media (max-width: 992px){flex-wrap: wrap; justify-content: center;}
+}
+
+.documents-list{
+  font-size: 24px;
+  line-height: 28px;
+  max-width: 631px; 
+  padding-left: 33px;
+  @media (max-width: 479px){padding-left: 0;}
+  li{
+    padding-bottom: 34px;
+    padding-left: 54px; 
+    list-style:none;  
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 29px;
+      height: 3px;
+      border: 0;
+      background: linear-gradient(89.72deg, rgba(235, 93, 86, 0) 0.24%, #EB5D56 28.23%, #390A40 73.32%, rgba(57, 10, 64, 0) 99.24%);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+    &:last-child{padding-bottom: 0;}
+  }
+  i{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
+/*-- /DOCUMENTS --*/
+
+
+/*-- FEEDBACK --*/
+.feedback {  margin-bottom: 108px;
+  background: url("../img/background/wheels-background2.png") center no-repeat,  linear-gradient(358.92deg, #FFFFFF 10%, rgba(229, 229, 229, 0.41) 55.26%, #FFFFFF 99.09%);
+  background-size: auto 794px;
+
+}
+.feedback-wrapper{
+  padding: 78px 59px 20px;
+  text-align: center;
+  h2{margin-bottom: 68px; word-wrap: break-word; max-width: inherit;}
+  .line{width: 200px;}
+  @media (max-width: 1350px){padding-left: 46px;padding-right: 46px;}
+  @media (max-width: 480px){padding-left: 0;padding-right: 0;}
+}
+.feedback-cards {
+  text-align-last: left;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+  @media (max-width: 992px){justify-content: center;}
+}
+.car-card {
+  flex-basis: 380px;
+  flex-shrink: 0;
+  padding: 20px 20px 42px;
+  border-radius: 6px;
+  margin-bottom: 24px;
+
+  background: #FFFFFF;
+  h3{margin-bottom: 12px;}
+  span{display: inline-block;margin-bottom: 32px;}
+  @media (max-width: 1350px){flex-basis: 280px;padding-bottom:28px;}
+  @media (max-width: 992px){flex-basis: 380px;}
+  @media (max-width: 420px){flex-basis: 280px;}
+  @media (max-width: 250px){flex-basis: 210px;}
+}
+.img-card {
+  margin-bottom: 28px;
+  img{
+    width: 380px;
+    height: 235px;
+    @media (max-width: 1350px){width: 280px;height: 174px;}
+    @media (max-width: 992px){width: 380px;height: 235px;}
+    @media (max-width: 420px){width: 280px;height: 174px;}
+    @media (max-width: 250px){width: 210px;height: 130px;}
+    object-fit: cover;
+    object-position: center;
+    position: relative;  
+    border-radius: 4px;
+  }
+}
+.price {
+  display: flex;
+  flex-wrap: wrap;
+  .color-text {  
+    color: #97364C;
+    font-family: Roboto Condensed;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    background: linear-gradient(91.17deg, #EB5D56 0.01%, #390A40 100.01%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    i{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      text-transform: none;
+    }
+  }
+  p{
+    display: block;
+    margin-bottom: 7px;
+
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    &:nth-child(odd){margin-right: 38px; flex-basis: 158px;}
+    @media (max-width: 1350px){&:nth-child(even){margin-left: auto;}}
+  }
+}
+
+.radio-button{
+    position: relative;
+    z-index: 0;
+    top: -18px;
+    margin-right: 24px;
+  }
+
+.radio-button::before{
+  content: '';
+  display: inline-block;
+  background: $cherry-color;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.radio-button:checked::before {  
+  content: '';
+  display: inline-block;
+  background: linear-gradient(91.17deg, #EB5D56 0.01%, #390A40 100.01%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  top: -2px;
+  left: -3px;
+}
+
+/*-- /FEEDBACK --*/
+
+
+/*-- HOWTO --*/
+.howto {
+  background: url("../img/background/howto-background.jpg") 100% 0/auto 606px no-repeat;
+  min-height: 600px;
+  margin-bottom: 100px;
+  position: relative;
+  @media (max-width: 1350px){
+    background-size: cover;
+    padding-bottom: 40px;
+  }
+  @media (max-width: 992px){background-position: 56% 0;}
+}
+
+.howto-wrapper{
+  padding-top: 38px;
+  margin-left: 110px;
+  position: relative;
+  z-index: 2;
+  max-width: 684px;
+  margin-right: auto;
+  h2{margin-bottom: 68px; max-width: 551px;}
+    @media (max-width: 1350px){margin-left: auto;margin-right: auto;}
+}
+
+.card-howto {
+  width: 311px;
+  margin-bottom: 44px;
+  img{padding-bottom: 27px;}
+  p{
+    font-family: Roboto, Arial, sans-serif;;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  h3{margin-bottom: 12px;}
+}
+/*-- /HOWTO --*/
+
+/*-- QUIZ --*/
+.quiz {
+  background:/*-- linear-gradient(to top, rgba(16, 15, 15, 66%), rgba(16, 15, 15, 66%)),--*/ url("../img/background/mazda-background.jpg") 0% 73%  no-repeat;
+  background-size: cover;
+  margin-bottom: 42px;
+  @media (max-width: 992px){background-position: 60% 73%;}
+}
+
+.quiz-wrapper {
+  padding: 78px 0 52px 112px;
+  color: #ffffff;
+  h2{color: #ffffff; margin-bottom: 12px; }
+  h3{color: #bdbdbd; margin-bottom: 46px;  }
+  @media (max-width: 480px){padding-left: 0;}
+}
+.quiz-form {
+  max-width: 770px;
+  margin-bottom: 6px;
+  .form-group{display: flex; flex-wrap: wrap;}
+  .button{margin-bottom: 20px;}
+  p{max-width: 336px;}
+  .form-input{border:0;}
+}
+.form-item {
+  width: 336px;
+  margin-right: 47px;
+  @media (max-width: 567px){margin-right: 0;}
+}
+.add-img{ display: block; width: 100%; margin-bottom: 34px; }
+/*-- /QUIZ --*/
+
+
+/*-- QUESTIONS --*/
+.questions {}
+.questions-wrapper {
+  max-width: 755px;
+  padding: 59px 0 63px 110px;
+  @media (max-width: 992px){padding-left: 0;}
+  h2{margin-bottom: 68px;}
+  h3{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    &::after{
+      content:'';
+      background: url("../img/checkmark.png") center no-repeat;
+      display: block; 
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+    }
+    &.rotate::after{
+      transform: scale(1, -1) 
+    }
+
+  }
+}
+.text-answer {
+  background: rgba(196, 196, 196, 0.06);
+  display: none;
+  padding: 18px 20px;
+}
+.answer-show{display: block;}
+.grey-line {
+  background: #F0F0F0;
+  width: 100%;
+  height: 2px;
+  border: 0;
+  margin: 0 0 24px;
+}
+
+/*-- /QUESTIONS --*/
